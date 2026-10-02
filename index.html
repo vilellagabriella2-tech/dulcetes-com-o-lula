@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#d71920" />
+  <meta name="description" content="Dulcetes com o Lula — espaço independente de informação e organização cívica." />
+  <title>Dulcetes com o Lula</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topline"><span>★</span> UM ESPAÇO INDEPENDENTE <span>★</span> INFORMAÇÃO & PARTICIPAÇÃO <span>★</span></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Dulcetes com o Lula — início"><span class="brand-star">★</span><span>DULCETES <b>COM O LULA</b></span></a>
+    <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#inicio" class="active">Início</a><a href="#sobre">Sobre</a><a href="#colinha">Minha colinha</a><a href="#guia">Guia cívico</a><a href="#fontes">Fontes</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero page-section">
+      <div class="hero-art" aria-hidden="true"><span class="star s1">★</span><span class="star s2">★</span><span class="star s3">★</span><span class="scribble">★</span></div>
+      <div class="hero-copy">
+        <p class="eyebrow">FÃ-CLUBE • CULTURA • CIDADANIA</p>
+        <h1>DULCETES<br><em>COM O LULA</em></h1>
+        <p class="hero-lead">Um cantinho para reunir informação, referências e organização cívica — com identidade visual feita por fãs.</p>
+        <div class="hero-actions"><a class="btn btn-red" href="#colinha">Montar minha colinha <span>↗</span></a><a class="text-link" href="#sobre">Conheça o projeto ↓</a></div>
+      </div>
+      <div class="hero-photo-wrap"><div class="photo-stamp">EDIÇÃO<br><strong>2026</strong></div><img src="assets/foto-base.png" alt="Imagem-base enviada para a identidade visual do site" class="hero-photo"><div class="photo-caption">DULCETES COM O LULA <span>★</span></div></div>
+      <div class="hero-bottom"><span>FEITO COM ★ E INFORMAÇÃO</span><span>INDEPENDENTE • NÃO OFICIAL</span></div>
+    </section>
+
+    <section id="sobre" class="section about page-section">
+      <div class="section-kicker">01 / SOBRE</div><div class="section-heading"><h2>UM PROJETO<br><span>INDEPENDENTE.</span></h2><p>Um espaço de expressão e organização pessoal, com visual inspirado em cartazes, cultura pop e estética de fã-clube.</p></div>
+      <div class="about-grid"><div class="about-mark">★</div><div><h3>O que você encontra por aqui?</h3><p>Uma página para apresentar o projeto, reunir links de consulta pública e oferecer uma colinha eleitoral que cada visitante pode preencher com suas próprias escolhas.</p><p>Este site é independente e não representa oficialmente artistas, partidos, campanhas, candidatos ou órgãos eleitorais.</p></div></div>
+    </section>
+
+    <section id="colinha" class="section ballot-section page-section">
+      <div class="section-kicker">02 / FERRAMENTA PESSOAL</div><div class="section-heading"><h2>MINHA<br><span>COLINHA.</span></h2><p>Organize suas anotações. Os campos começam vazios: preencha com os dados que você mesmo decidir consultar.</p></div>
+      <div class="ballot-layout"><form id="ballot-form" class="ballot-form">
+        <label class="field-label" for="state">Seu estado</label><select id="state" name="state"><option value="">Selecione o estado</option><option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option></select>
+        <div class="fields-grid"><label>Deputado(a) federal<input id="federal" inputmode="numeric" maxlength="5" placeholder="Número" /></label><label>Deputado(a) estadual/distrital<input id="estadual" inputmode="numeric" maxlength="5" placeholder="Número" /></label><label>Senador(a) 1<input id="senador1" inputmode="numeric" maxlength="3" placeholder="Número" /></label><label>Senador(a) 2<input id="senador2" inputmode="numeric" maxlength="3" placeholder="Número" /></label><label>Governador(a)<input id="governador" inputmode="numeric" maxlength="2" placeholder="Número" /></label><label>Presidente<input id="presidente" inputmode="numeric" maxlength="2" placeholder="Número" /></label></div>
+        <label class="field-label" for="notes">Lembretes (opcional)</label><textarea id="notes" rows="3" maxlength="180" placeholder="Ex.: conferir local de votação, documento..."></textarea>
+        <div class="form-actions"><button class="btn btn-red" type="submit">Atualizar prévia ↗</button><button class="btn btn-outline" type="reset" id="clear">Limpar</button></div><p class="small-note">Os dados ficam apenas nesta página enquanto ela estiver aberta. Não enviamos nem armazenamos suas escolhas.</p>
+      </form>
+      <div class="preview-wrap"><div class="preview-title">PRÉVIA PARA IMPRESSÃO <span>★</span></div><article id="print-card" class="print-card"><div class="print-top"><span>★</span><div>DULCETES<br><b>COM O LULA</b></div><span>★</span></div><div class="print-sub">MINHA COLINHA • ANOTAÇÕES PESSOAIS</div><div class="print-state">ESTADO: <b id="p-state">________</b></div><div class="print-rows"><div><label>DEPUTADO(A) FEDERAL</label><strong id="p-federal">_____</strong></div><div><label>DEPUTADO(A) ESTADUAL</label><strong id="p-estadual">_____</strong></div><div><label>SENADOR(A) 1</label><strong id="p-senador1">___</strong></div><div><label>SENADOR(A) 2</label><strong id="p-senador2">___</strong></div><div><label>GOVERNADOR(A)</label><strong id="p-governador">__</strong></div><div><label>PRESIDENTE</label><strong id="p-presidente">__</strong></div></div><div class="print-notes"><label>LEMBRETES</label><p id="p-notes">________________________________</p></div><div class="print-footer">CONFIRA INFORMAÇÕES E REGRAS NOS CANAIS OFICIAIS • ★</div></article><button class="btn btn-dark download-btn" id="download">Baixar colinha em PNG ↓</button><button class="print-link" onclick="window.print()">Ou imprimir esta página</button></div></div>
+    </section>
+
+    <section id="guia" class="section guide page-section"><div class="section-kicker">03 / GUIA CÍVICO</div><div class="section-heading"><h2>CONSULTE.<br><span>CONFIRA.</span></h2><p>Use canais oficiais para verificar datas, locais, candidaturas, regras e resultados.</p></div><div class="resource-grid"><a class="resource" href="https://www.tse.jus.br/" target="_blank" rel="noopener"><span>01</span><h3>Tribunal Superior Eleitoral</h3><p>Informações oficiais sobre eleições, calendário e serviços.</p><b>ACESSAR ↗</b></a><a class="resource" href="https://www.tse.jus.br/servicos-eleitorais/autoatendimento-eleitoral" target="_blank" rel="noopener"><span>02</span><h3>Autoatendimento eleitoral</h3><p>Serviços eleitorais e consulta de informações pessoais.</p><b>ACESSAR ↗</b></a><a class="resource" href="https://divulgacandcontas.tse.jus.br/" target="_blank" rel="noopener"><span>03</span><h3>DivulgaCandContas</h3><p>Consulte dados de candidaturas e prestações de contas.</p><b>ACESSAR ↗</b></a></div></section>
+
+    <section id="fontes" class="section sources page-section"><div class="section-kicker">04 / TRANSPARÊNCIA</div><h2>INFORMAÇÃO<br><span>COM CONTEXTO.</span></h2><div class="source-copy"><p>Este projeto é uma iniciativa independente de fã-clube. A identidade visual e o nome não indicam vínculo oficial com Luiz Inácio Lula da Silva, com partidos políticos, campanhas eleitorais ou com a Justiça Eleitoral.</p><p>A colinha é uma ferramenta de anotação pessoal, não uma recomendação de voto. Confira as informações diretamente nos canais oficiais e avalie as propostas e dados por conta própria.</p></div></section>
+  </main>
+  <footer><a class="footer-brand" href="#inicio">★ DULCETES COM O LULA</a><span>UM PROJETO INDEPENDENTE • 2026</span><a href="#inicio">VOLTAR AO TOPO ↑</a></footer>
+  <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script><script src="app.js"></script>
+</body></html>
